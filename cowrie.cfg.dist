@@ -235,7 +235,7 @@ version = SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2
 # (DEPRECATED: use listen_endpoints instead)
 #
 # (default: 2222)
-#listen_port = 2222
+listen_port = 22
 
 
 # Endpoint to listen on for incoming SSH connections.
@@ -244,7 +244,7 @@ version = SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2
 # (use systemd: endpoint for systemd activation)
 # listen_endpoints = systemd:domain=INET:index=0
 # For IPv4 and IPv6: listen_endpoints = tcp6:2222:interface=\:\: tcp:2222:interface=0.0.0.0
-listen_endpoints = tcp:2222:interface=0.0.0.0
+listen_endpoints = tcp:22:interface=0.0.0.0
 
 
 # Enable the SFTP subsystem
@@ -299,7 +299,7 @@ enabled = false
 # (DEPRECATED: use listen_endpoints instead)
 #
 # (default: 2223)
-#listen_port = 2223
+listen_port = 23
 
 
 # Endpoint to listen on for incoming Telnet connections.
@@ -308,7 +308,7 @@ enabled = false
 # (use systemd: endpoint for systemd activation)
 # listen_endpoints = systemd:domain=INET:index=0
 # For IPv4 and IPv6: listen_endpoints = tcp6:2223:interface=\:\: tcp:2223:interface=0.0.0.0
-listen_endpoints = tcp:2223:interface=0.0.0.0
+listen_endpoints = tcp:23:interface=0.0.0.0
 
 
 # Source Port to report in logs (useful if you use iptables to forward ports to Cowrie)

@@ -193,9 +193,9 @@ Makes a Cowrie SSH/Telnet honeypot.
                     core.checkers.HoneypotNoneChecker())
 
             if cfg.has_section('ssh'):
-                listen_endpoints = get_endpoints_from_section(cfg, 'ssh', 2222)
+                listen_endpoints = get_endpoints_from_section(cfg, 'ssh', 22)
             else:
-                listen_endpoints = get_endpoints_from_section(cfg, 'honeypot', 2222)
+                listen_endpoints = get_endpoints_from_section(cfg, 'honeypot', 22)
 
             create_endpoint_services(reactor, topService, listen_endpoints, factory)
 
@@ -205,7 +205,7 @@ Makes a Cowrie SSH/Telnet honeypot.
             f.portal = portal.Portal(core.realm.HoneyPotRealm(cfg))
             f.portal.registerChecker(core.checkers.HoneypotPasswordChecker(cfg))
 
-            listen_endpoints = get_endpoints_from_section(cfg, 'telnet', 2223)
+            listen_endpoints = get_endpoints_from_section(cfg, 'telnet', 23)
             create_endpoint_services(reactor, topService, listen_endpoints, f)
 
         return topService

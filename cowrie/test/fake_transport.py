@@ -24,7 +24,7 @@ class Container(object):
     """
     def getPeer(self):
         self.host = "1.1.1.1"
-        self.port = 2222
+        self.port = 22
         return self
 
     """
